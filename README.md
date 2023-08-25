@@ -1,55 +1,156 @@
-# Spring Framework 6: Beginner to Guru
+# Challenge with Java BE
 
-This repository is for an example application built in my [Spring Framework 6 - Beginner to Guru](https://www.udemy.com/course/spring-framework-6-beginner-to-guru/?referralCode=2BD0B7B7B6B511D699A9) online course
+This is a simple project with a challenge for Backend developers.
 
-The application is a simple Spring Boot 3 / Spring Framework 6 web application. It is used to help students learn how
-to use the Spring Framework. Step by step instructions and detailed explanations can be found within the course.
+## In this project you will learn:
 
-As you work through the course, please feel free to fork this repository to your out GitHub repo. Most links contain links
-to source code changes. If you encounter a problem you can compare your code to the lesson code. [See this link for help with compares](https://github.com/springframeworkguru/spring5webapp/wiki#getting-an-error-but-cannot-find-what-is-different-from-lesson-source-code)
+* Consuming API (Feign)
+* Creating API REST (Spring Web)
+* Create a database (Spring Data)
+* Create a CircuitBreak & RateLimiter (Resilience4J)
+* Different Roles & JWT (Spring Security)
+* JUnit, Mockito, MockMvc
+* H2/Postgres
+* Cache with Hazelcast
+* Swagger
+* Sonar
+* CI/CD
+* Docker
+* Kubernetes
+* Deploy in Cloud
 
-## Spring Framework 6: Beginner to Guru Course Wiki
-Got a question about your Spring Framework 6 course? [Checkout these FAQs!](https://github.com/springframeworkguru/spring5webapp/wiki)
+## Tasks:
 
-## Getting Your Development Environment Setup
-### Recommended Versions
-| Recommended             | Reference                                                                                                                                                     | Notes                                                                                                                                                                                                                  |
-|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Oracle Java 17 JDK      | [Download]([https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html](https://www.oracle.com/java/technologies/downloads/#java17) | Java 17 or higher is required for Spring Framework 6                                                                                                                                                                   |
-| IntelliJ 2022 or Higher | [Download](https://www.jetbrains.com/idea/download/)                                                                                                          | Ultimate Edition recommended. Students can get a free 120 trial license [here](https://github.com/springframeworkguru/spring5webapp/wiki/Which-IDE-to-Use%3F#how-do-i-get-the-free-120-day-trial-to-intellij-ultimate) |
-| Maven 3.8.0 or higher   | [Download](https://maven.apache.org/download.cgi)                                                                                                             | [Installation Instructions](https://maven.apache.org/install.html)                                                                                                                                                     |
-| Gradle 7.6 or higher    | [Download](https://gradle.org/install/)                                                                                                                       | **Note:** Use Version 5 or higher if using Java 11                                                                                                                                                                     |
-| Git 2.39 or higher       | [Download](https://git-scm.com/downloads)                                                                                                                     |                                                                                                                                                                                                                        | 
-| Git GUI Clients         | [Downloads](https://git-scm.com/downloads/guis)                                                                                                               | Not required. But can be helpful if new to Git. SourceTree is a good option for Mac and Windows users.                                                                                                                 |
+### LVL 1 
 
-## All Spring Framework Guru Courses
-### Spring Framework 6
-* [Spring Framework 6 - Beginner to Guru](https://www.udemy.com/course/spring-framework-6-beginner-to-guru/?referralCode=2BD0B7B7B6B511D699A9)
-* [Hibernate and Spring Data JPA: Beginner to Guru](https://www.udemy.com/course/hibernate-and-spring-data-jpa-beginner-to-guru/?referralCode=251C4C865302C7B1BB8F)
-### Spring Framework 5
-* [Spring Framework 5: Beginner to Guru](https://www.udemy.com/testing-spring-boot-beginner-to-guru/?couponCode=GITHUB_REPO) - Get the most modern and comprehensive course available for the Spring Framework! Join over 17,200 over Guru's in an Slack community exclusive to this course! More than 5,700 students have given this 53 hour course a 5 star review!
-* [Spring Boot Microservices with Spring Cloud Beginner to Guru](https://www.udemy.com/course/spring-boot-microservices-with-spring-cloud-beginner-to-guru/?referralCode=6142D427AE53031FEF38) - Master Microservice Architectures Using Spring Boot 2 and Cloud Based Deployments with Spring Cloud and Docker
-* [Reactive Programming with Spring Framework 5](https://www.udemy.com/reactive-programming-with-spring-framework-5/?couponCode=GITHUB_REPO_SF5B2G) - Keep your skills razor sharp and take a deep dive into Reactive Programming!
-* [Testing Spring Boot: Beginner to Guru](https://www.udemy.com/testing-spring-boot-beginner-to-guru/?couponCode=GITHUB_REPO_SF5B2G) - ** Best Selling Course** Become an expert in testing Java and Spring Applications with JUnit 5, Mockito and much more!
-* [Spring Security Core: Beginner to Guru](https://www.udemy.com/course/spring-security-core-beginner-to-guru/?referralCode=306F288EB78688C0F3BC)
+**Goals:** 
+* Create the project
+* Create the database using H2
+* Create the user entity, and Roles
+* Include JWT authentication
+* Create the login/registration/upgrade-permissions endpoints
 
-### SQL
-* [SQL Beginner to Guru: MySQL Edition](https://www.udemy.com/sql-beginner-to-guru-mysql-edition/?couponCode=GITHUB_REPO_SF5B2G) - SQL is a fundamental must have skill, which employers are looking for. Learn to master SQL on MySQL, the worlds most popular database!
+**Expected time:** 16 | 8 | 4 hours
 
-### DevOps
-* [Apache Maven: Beginner to Guru](https://www.udemy.com/apache-maven-beginner-to-guru/?couponCode=GITHUB_REPO_SF5B2G) - **Best Selling Course** Take the mystery out of Apache Maven. Learn how to use Maven to build your Java and Spring Boot projects!
-* [OpenAPI: Beginner to Guru](https://www.udemy.com/course/openapi-beginner-to-guru/?referralCode=0E7F511C749013CA6AAD) - Master OpenAPI (formerly Swagger) to Create Specifications for Your APIs
-* [Docker for Java Developers](https://www.udemy.com/docker-for-java-developers/?couponCode=GITHUB_REPO_SF5B2G) - Best Selling Course on Udemy! Learn how you can supercharge your development by leveraging Docker. Collaborate with other students in a Slack community exclusive to the course!
-* [Spring Framework DevOps on AWS](https://www.udemy.com/spring-core-devops-on-aws/?couponCode=GITHUB_REPO_SF5B2G) - Learn how to build and deploy Spring applications on Amazon AWS!
-* [Ready for Production with Spring Boot Actuator](https://www.udemy.com/ready-for-production-with-spring-boot-actuator/?couponCode=GITHUB_REPO_SF5B2G) - Learn how to leverage Spring Boot Actuator to monitor your applications running in production.
+#### Create your project
 
-### Web Development with Spring Framework
-* [Mastering Thymeleaf with Spring Boot](https://www.udemy.com/mastering-thymeleaf-with-spring/?couponCode=GITHUB_REPO_SF5B2G) - Once you learn Thymeleaf, you'll never want to go back to using JSPs for web development!
+- [ ] Create the database using [H2](https://www.h2database.com/html/main.html). You should include the user table, the user can have multiple roles.
+- [ ] Create two roles ADMIN, USER
+- [ ] Create an endpoint to create a user (register). The user should have a username and a password, be careful when saving the user password, and the roles.
+
+#### Create the authentication for your API
+
+- [ ] Create an endpoint to return the JWT (5 minutes of timeout), receive the username and password
+- [ ] Create the authentication using JWT
+- [ ] Create an endpoint to update the permission to this user to ADMIN and/or USER role. This API could be called just by the ADMIN user, see @Secured and Roles in Spring Security.
+
+* Book: REST API - Design Rulebook : Mark Masse: https://www.oreilly.com/library/view/rest-api-design/9781449317904/
+* Spring Data: https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa
+* Spring Boot H2: https://www.baeldung.com/spring-boot-h2-database
+* Spring REST - Full Tutorial: https://www.baeldung.com/rest-with-spring-series
+* Spring REST: https://spring.io/guides/tutorials/rest/
+* Spring Security: https://www.toptal.com/spring/spring-security-tutorial
+* Spring Security JWT: https://www.bezkoder.com/spring-boot-jwt-authentication/
+
+### LVL 2
+
+**Expected time:** 16 | 9 | 5 hours
+
+#### Upgrade your API REST
+
+- [ ] Create an endpoint to consume an API from TBMD to retrieve all the movies [([https://imdb-api.com/](https://developer.marvel.com/)) ](https://developer.themoviedb.org/)and populate your database (you can use WebClient or Feign to consume the API). This API could be called just by the ADMIN user, see @Secured and Roles in Spring Security.
+- [ ] Create an endpoint to list all the movies.
+- [ ] Create an endpoint to include a movie to the user (favorite list)
+- [ ] Create an endpoint to exclude the movie from the favorite list
+- [ ] Each time the user includes the movie in the favorite list add one "star" to the movie
+- [ ] Create an endpoint to list the top 10 movies, the movies with more stars.
+- [ ] Create an endpoint to list the favorite movies per user.
+- [ ] Don't forget to include Swagger/OpenAPI, and the test.
+
+#### Content to help:
+
+* Spring Test: https://www.baeldung.com/integration-testing-in-spring
+* Error Handling for REST: https://www.baeldung.com/exception-handling-for-rest-with-spring
+* Bean Validation: https://www.baeldung.com/javax-validation
+* Open API: https://www.baeldung.com/spring-rest-openapi-documentation
+* WebClient: https://www.baeldung.com/spring-5-webclient
+* Feign: https://www.baeldung.com/intro-to-feign
+
+----------
+
+### LVL 3
+
+**Expected time:** 18 | 11 | 7 hours
+
+#### Include Hazelcast, design pattern, Resilience4J
+
+- [ ] Include this rank top movies in the cache (Hazelcast), and get from it using RateLimiter (https://resilience4j.readme.io/docs/ratelimiter) as fallback.
+- [ ] Find another API to get Movies, and update the first endpoint to use the template method design pattern to be able to get the movies from both APIs. Use a CircuitBreak for that. If you have any problem with one API you should get it from the other API as a fallback. (You can try changing the API Key)
+- [ ] Create a new endpoint to send a random movie to the user.
+This endpoint should do this: find another user who likes the same movies as the current user and upload a random movie from that favorites list.
+If this condition does not exist, just send a random movie.
+
+#### Content to help:
+
+* Guide to Resilience4j: https://www.baeldung.com/resilience4j
+* Spring Boot with Resilience4j: https://www.baeldung.com/spring-boot-resilience4j
+* RateLimiter: https://resilience4j.readme.io/docs/ratelimiter
+* Caching with Spring Boot and Hazelcast: https://hazelcast.com/blog/spring-boot/
+* Get Started with Hazelcast using Spring Boot: https://docs.hazelcast.com/tutorials/hazelcast-embedded-springboot
+* Template Method: https://refactoring.guru/design-patterns/template-method
+* Failover: https://medium.com/lydtech-consulting/failover-and-circuit-breaker-with-resilience4j-14a57a43c0da
+* Cloud Design Patterns Book – https://www.microsoft.com/en-us/download/details.aspx?id=42026
+
+----------
+
+### LVL 4
+
+**Expected time:** 21 | 14 | 8 hours
+
+#### Part 1 - Docker, Kubernetes
+
+- [ ] Run your application using Docker, create a docker file.
+- [ ] Create the files to deploy the application using kubernetes.
+- [ ] Include the probes from actuator in your deployment.yaml
+- [ ] Deploy your application in local environment using Kubernetes.
 
 
-## Connect with Spring Framework Guru
-* Spring Framework Guru [Blog](https://springframework.guru/)
-* Subscribe to Spring Framework Guru on [YouTube](https://www.youtube.com/channel/UCrXb8NaMPQCQkT8yMP_hSkw)
-* Like Spring Framework Guru on [Facebook](https://www.facebook.com/springframeworkguru/)
-* Follow Spring Framework Guru on [Twitter](https://twitter.com/spring_guru)
-* Connect with John Thompson on [LinkedIn](http://www.linkedin.com/in/springguru)
+**Expected time:** 27 | 17 | 7 hours
+
+#### Part 2 - Deploy in the cloud, Openshift
+
+- [ ] Include postgres to your production environment
+- [ ] Include all the yaml files that are required to deploy the hazelcast and postgres
+- [ ] Do the deployment into sandbox Openshift (https://developers.redhat.com/developer-sandbox)
+- [ ] Create a service and a route for your application to expose your application to internet.
+- [ ] Create a document with step-by-step on how to deploy the application in the Openshift
+
+
+#### Content to help:
+
+* Spring Boot Actuator: https://www.baeldung.com/spring-boot-actuators
+* Spring Boot with Docker: https://spring.io/guides/gs/spring-boot-docker/
+* Hazelcast Config: https://docs.hazelcast.com/imdg/4.2/configuration/configuring-declaratively
+* Kubernetes Tutorial: https://medium.com/@javatechie/kubernetes-tutorial-run-deploy-spring-boot-application-in-k8s-cluster-using-yaml-configuration-3b079154d232
+* Postgres K8s: https://www.sumologic.com/blog/kubernetes-deploy-postgres/
+* Book: Modernizing Enterprise Java: https://developers.redhat.com/e-books/modernizing-enterprise-java
+
+----------
+
+### LVL 5
+
+#### Pipeline, CI/CD, Sonar
+
+- [ ] Include SonarCloud in your project, make sure the coverage is above 70% and you don't have a loud code smell.
+- [ ] Include a pipeline, you can use gitHub Actions, or Travis CI, use what you prefer. Your CI pipeline should include [build, test, sonar]
+- [ ] Include also CD in your pipeline, it should be able to deploy in the Cloud.
+
+#### Content to help:
+
+* SonarCloud Integration with SpringBoot-Maven: https://medium.com/@bethecodewithyou/sonarcloud-integration-with-springboot-maven-5820180ef764
+* How to build a CI/CD pipeline with GitHub Actions in four simple steps: https://github.blog/2022-02-02-build-ci-cd-pipeline-github-actions-four-steps/
+* The twelve-factor: https://12factor.net/
+* Travis CI: https://www.travis-ci.org/
+
+
+
