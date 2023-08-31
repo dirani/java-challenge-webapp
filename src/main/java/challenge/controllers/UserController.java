@@ -1,6 +1,8 @@
 package challenge.controllers;
 
+import challenge.domain.Role;
 import challenge.domain.User;
+import challenge.services.RoleService;
 import challenge.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +18,8 @@ public class UserController
     @Autowired
     UserService userService;
     //creating a get mapping that retrieves all the students detail from the database
+    @Autowired
+    RoleService roleService;
     @GetMapping
     private List<User> getAllStudent()
     {
@@ -40,4 +44,14 @@ public class UserController
         userService.saveOrUpdate(user);
         return user.getId();
     }
+    @PutMapping("/{id}")
+    private void addRoleAdmin(@PathVariable("id") Long id)
+    {
+        //RoleService roleService = new RoleService(roleRepository);
+        User user = userService.getUserById(id);
+        Role admin = roleService.getRoleByName("ADMIN");
+        user.addRole(admin);
+        userService.saveOrUpdate(user);
+    }
+
 }
