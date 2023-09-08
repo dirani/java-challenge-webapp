@@ -1,11 +1,7 @@
 package challenge.bootstrap;
 
-import challenge.domain.Author;
-import challenge.domain.Book;
-import challenge.domain.Publisher;
-import challenge.repositories.AuthorRepository;
-import challenge.repositories.BookRepository;
-import challenge.repositories.PublisherRepository;
+import challenge.domain.*;
+import challenge.repositories.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -14,68 +10,54 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class BootstrapData implements CommandLineRunner {
+    private final UserRepository userRepository;
+    private final RoleRepository roleRepository;
 
-    private final AuthorRepository authorRepository;
-    private final BookRepository bookRepository;
-    private final PublisherRepository publisherRepository;
+    public BootstrapData(UserRepository userRepository, RoleRepository roleRepository) {
 
-    public BootstrapData(AuthorRepository authorRepository, BookRepository bookRepository,
-                         PublisherRepository publisherRepository) {
-        this.authorRepository = authorRepository;
-        this.bookRepository = bookRepository;
-        this.publisherRepository = publisherRepository;
+        this.userRepository = userRepository;
+        this.roleRepository = roleRepository;
+
     }
 
     @Override
     public void run(String... args) throws Exception {
-        Author eric = new Author();
-        eric.setFirstName("Eric");
-        eric.setLastName("Evans");
 
-        Book ddd = new Book();
-        ddd.setTitle("Domain Driven Design");
-        ddd.setIsbn("123456");
+        User user1 = new User();
+        user1.setUsername("dirani@gmail.com");
+        user1.setPassword("password");
+        User user1Saved = userRepository.save(user1);
+        userRepository.save(user1);
 
-        Author ericSaved = authorRepository.save(eric);
-        Book dddSaved = bookRepository.save(ddd);
+        User user2 = new User();
+        user2.setUsername("tbomfim@aubay.pt");
+        user2.setPassword("password");
+        User user2Saved = userRepository.save(user2);
+        userRepository.save(user1);
 
-        Author rod = new Author();
-        rod.setFirstName("Rod");
-        rod.setLastName("Johnson");
+        Role adminRole = new Role();
+        adminRole.setName("ADMIN");
+        Role adminRoleSaved = roleRepository.save(adminRole);
+        roleRepository.save(adminRole);
 
-        Book noEJB = new Book();
-        noEJB.setTitle("J2EE Development without EJB");
-        noEJB.setIsbn("54757585");
+        Role userRole = new Role();
+        userRole.setName("USER");
+        Role userRoleSaved = roleRepository.save(userRole);
+        roleRepository.save(userRole);
 
-        Author rodSaved = authorRepository.save(rod);
-        Book noEJBSaved = bookRepository.save(noEJB);
+        user1Saved.getRoles().add(adminRoleSaved);
+        user1Saved.getRoles().add(userRoleSaved);
 
-        ericSaved.getBooks().add(dddSaved);
-        rodSaved.getBooks().add(noEJBSaved);
-        dddSaved.getAuthors().add(ericSaved);
-        noEJBSaved.getAuthors().add(rodSaved);
+        user2Saved.getRoles().add(userRoleSaved);
 
-
-        Publisher publisher = new Publisher();
-        publisher.setPublisherName("My Publisher");
-        publisher.setAddress("123 Main");
-        Publisher savedPublisher = publisherRepository.save(publisher);
-
-        dddSaved.setPublisher(savedPublisher);
-        noEJBSaved.setPublisher(savedPublisher);
-
-        authorRepository.save(ericSaved);
-        authorRepository.save(rodSaved);
-        bookRepository.save(dddSaved);
-        bookRepository.save(noEJBSaved);
+        userRepository.save(user1Saved);
+        userRepository.save(user2Saved);
+        roleRepository.save(adminRoleSaved);
+        roleRepository.save(userRoleSaved);
 
         System.out.println("In Bootstrap");
-        System.out.println("Author Count: " + authorRepository.count());
-        System.out.println("Book Count: " + bookRepository.count());
-
-
-
-        System.out.println("Publisher Count: " + publisherRepository.count());
+        System.out.println("User Count: " + userRepository.count());
+        System.out.println("Role Count: " + roleRepository.count());
     }
 }
 
