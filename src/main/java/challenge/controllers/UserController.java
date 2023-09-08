@@ -47,7 +47,6 @@ public class UserController
     @PutMapping("/{id}")
     private void addRoleAdmin(@PathVariable("id") Long id)
     {
-        //RoleService roleService = new RoleService(roleRepository);
         User user = userService.getUserById(id);
         Role admin = roleService.getRoleByName("ADMIN");
         user.addRole(admin);
