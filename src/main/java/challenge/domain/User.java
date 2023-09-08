@@ -16,7 +16,7 @@ public class User {
     private Long id;
     private String username;
     private String password;
-
+    private Set<Long> favorites;
     public Long getId() {
         return id;
     }
@@ -69,6 +69,18 @@ public class User {
     @Override
     public int hashCode() {
         return Objects.hash(getId());
+    }
+
+    public void addFavorite(Long movieId) {
+        favorites.add(movieId);
+    }
+
+    public void removeFavorite(Long movieId) {
+        favorites.remove(movieId);
+    }
+
+    public Set<Long> getFavorites() {
+        return favorites;
     }
 
 }
