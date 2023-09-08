@@ -87,7 +87,7 @@ public class BootstrapData implements CommandLineRunner {
         roleRepository.save(adminRole);
 
         Role userRole = new Role();
-        userRole.setName("ADMIN");
+        userRole.setName("USER");
         Role userRoleSaved = roleRepository.save(userRole);
         roleRepository.save(userRole);
 
