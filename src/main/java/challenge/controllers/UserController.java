@@ -53,5 +53,6 @@ public class UserController
         user.addRole(admin);
         userService.saveOrUpdate(user);
     }
-
+// poderia estar em user service
+    // onde já tem os métodos
 }

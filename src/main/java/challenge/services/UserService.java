@@ -34,3 +34,9 @@ public class UserService
         userRepository.deleteById(id);
     }
 }
+
+// logica deveria estar aqui
+// a na oser que seja no modelo (dominio) rico
+// estas sáo entidades anemicas (nao tem nada)
+// modelo um pouco mais rico é um pouco melhor
+// coesão 
