@@ -1,11 +1,17 @@
 package challenge.entities;
 
 import jakarta.persistence.*;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import java.util.UUID;
 
+@Getter
+@Setter
+@Builder
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 public class Movie {
     @Id
     @GeneratedValue(generator = "UUID")
@@ -14,6 +20,4 @@ public class Movie {
     private UUID id;
     private String title;
 
-    public Movie() {
-    }
 }

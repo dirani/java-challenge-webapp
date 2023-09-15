@@ -2,23 +2,22 @@ package challenge.bootstrap;
 
 import challenge.entities.*;
 import challenge.repositories.*;
+import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import java.util.Arrays;
+import java.util.UUID;
 
 /**
  * Created by jt, Spring Framework Guru.
  */
 @Component
+@RequiredArgsConstructor
 public class BootstrapData implements CommandLineRunner {
     private final UserRepository userRepository;
     private final RoleRepository roleRepository;
-
-    public BootstrapData(UserRepository userRepository, RoleRepository roleRepository) {
-
-        this.userRepository = userRepository;
-        this.roleRepository = roleRepository;
-
-    }
+    private final MovieRepository movieRepository;
 
     @Override
     public void run(String... args) throws Exception {
@@ -58,7 +57,33 @@ public class BootstrapData implements CommandLineRunner {
         System.out.println("In Bootstrap");
         System.out.println("User Count: " + userRepository.count());
         System.out.println("Role Count: " + roleRepository.count());
+
+        loadMovieData();
     }
+
+    private void loadMovieData() {
+
+        if (movieRepository.count() == 0) {
+            Movie movie1 = Movie.builder()
+                    .id(UUID.randomUUID())
+                    .title("BMovie 1")
+                    .build();
+
+            Movie movie2 = Movie.builder()
+                    .id(UUID.randomUUID())
+                    .title("BMovie 2")
+                    .build();
+
+            Movie movie3 = Movie.builder()
+                    .id(UUID.randomUUID())
+                    .title("BMovie 3")
+                    .build();
+
+            movieRepository.saveAll(Arrays.asList(movie1, movie2, movie3));
+        }
+
+    }
+
 }
 
 

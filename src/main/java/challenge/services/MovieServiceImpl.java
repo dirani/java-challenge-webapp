@@ -13,19 +13,19 @@ public class MovieServiceImpl implements MovieService {
     private Map<UUID, MovieDTO> movieMap;
 
     public MovieServiceImpl() {
-        MovieDTO movie1 = MovieDTO.builder()
+         MovieDTO movie1 = MovieDTO.builder()
                 .id(UUID.randomUUID())
-                .title("Movie 1")
+                .title("CMovie 1")
                 .build();
 
         MovieDTO movie2 = MovieDTO.builder()
                 .id(UUID.randomUUID())
-                .title("Movie 2")
+                .title("CMovie 2")
                 .build();
 
         MovieDTO movie3 = MovieDTO.builder()
                 .id(UUID.randomUUID())
-                .title("Movie 3")
+                .title("CMovie 3")
                 .build();
 
         movieMap = new HashMap<>();
