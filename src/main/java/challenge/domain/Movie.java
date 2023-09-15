@@ -11,9 +11,6 @@ public class Movie {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
-    private int releaseYear;
-    private String genre;
-    private double rating;
 
     public Movie() {
     }
@@ -25,10 +22,7 @@ public class Movie {
     public String toString() {
         return "Movie{" +
                 "id=" + id +
-                ", title='" + title + '\'' +
-                ", releaseYear=" + releaseYear +
-                ", genre='" + genre + '\'' +
-                ", rating=" + rating +
+                ", title='" + title +
                 '}';
     }
 }
