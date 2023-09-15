@@ -21,6 +21,14 @@ public class BootstrapData implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        loadUserData();
+        loadMovieData();
+
+
+
+    }
+
+    private void loadUserData() {
 
         User user1 = new User();
         user1.setUsername("dirani@gmail.com");
@@ -57,8 +65,6 @@ public class BootstrapData implements CommandLineRunner {
         System.out.println("In Bootstrap");
         System.out.println("User Count: " + userRepository.count());
         System.out.println("Role Count: " + roleRepository.count());
-
-        loadMovieData();
     }
 
     private void loadMovieData() {

@@ -16,7 +16,7 @@ import java.util.UUID;
 public class MovieController {
 
     public static final String MOVIE_PATH = "/api/v1/movie";
-    public static final String MOVIE_PATH_ID = MOVIE_PATH + "/{customerId}";
+    public static final String MOVIE_PATH_ID = MOVIE_PATH + "/{movieId}";
     private final MovieService movieService;
 
     @PatchMapping(MOVIE_PATH_ID)
