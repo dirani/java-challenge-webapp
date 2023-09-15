@@ -1,6 +1,6 @@
 package challenge.bootstrap;
 
-import challenge.domain.*;
+import challenge.entities.*;
 import challenge.repositories.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

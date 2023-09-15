@@ -1,6 +1,6 @@
 package challenge.repositories;
 
-import challenge.domain.User;
+import challenge.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {

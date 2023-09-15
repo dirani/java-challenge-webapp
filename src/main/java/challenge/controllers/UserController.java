@@ -1,7 +1,7 @@
 package challenge.controllers;
 
-import challenge.domain.Role;
-import challenge.domain.User;
+import challenge.entities.Role;
+import challenge.entities.User;
 import challenge.services.RoleService;
 import challenge.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

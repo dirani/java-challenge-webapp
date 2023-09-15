@@ -1,6 +1,6 @@
 package challenge.services;
 
-import challenge.domain.Role;
+import challenge.entities.Role;
 import challenge.repositories.RoleRepository;
 import org.springframework.stereotype.Service;
 

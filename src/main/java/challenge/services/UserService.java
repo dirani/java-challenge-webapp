@@ -1,6 +1,6 @@
 package challenge.services;
 
-import challenge.domain.User;
+import challenge.entities.User;
 import challenge.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
 package challenge;
 
-import challenge.domain.Role;
+import challenge.entities.Role;
 import challenge.repositories.RoleRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

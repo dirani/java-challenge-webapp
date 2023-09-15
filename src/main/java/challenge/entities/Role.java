@@ -1,4 +1,4 @@
-package challenge.domain;
+package challenge.entities;
 
 import jakarta.persistence.*;
 
