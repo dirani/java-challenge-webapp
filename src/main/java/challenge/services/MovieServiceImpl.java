@@ -67,9 +67,19 @@ public class MovieServiceImpl implements MovieService {
         return savedMovie;
     }
 
-    @Override
+/*    @Override
     public Optional<MovieDTO> getMovieById(UUID uuid) {
         return Optional.of(movieMap.get(uuid));
+    }*/
+
+    @Override
+    public Optional<MovieDTO> getMovieById(UUID uuid) {
+        MovieDTO movie = movieMap.get(uuid);
+        if (movie == null) {
+            return Optional.empty();
+        } else {
+            return Optional.of(movie);
+        }
     }
 
     @Override

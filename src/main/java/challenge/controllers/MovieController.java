@@ -20,20 +20,20 @@ public class MovieController {
     private final MovieService movieService;
 
     @PatchMapping(MOVIE_PATH_ID)
-    public ResponseEntity patchMovieById(@PathVariable("movieId") UUID movieId,
+    public ResponseEntity<Void> patchMovieById(@PathVariable("movieId") UUID movieId,
                                          @RequestBody MovieDTO movie){
 
         movieService.patchMovieById(movieId, movie);
 
-        return new ResponseEntity(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @DeleteMapping(MOVIE_PATH_ID)
-    public ResponseEntity deleteMovieById(@PathVariable("movieId") UUID movieId){
+    public ResponseEntity<Void> deleteMovieById(@PathVariable("movieId") UUID movieId){
 
         movieService.deleteMovieById(movieId);
 
-        return new ResponseEntity(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @PutMapping(MOVIE_PATH_ID)
